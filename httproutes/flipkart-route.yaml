@@ -11,7 +11,7 @@ spec:
     - matches:
         - path:
             type: PathPrefix
-            value: "/flipkart"      # root path
+            value: /      
       backendRefs:
-        - name: flipkart-service    # your Kubernetes Service name
+        - name: flipkart-service    
           port: 3000
