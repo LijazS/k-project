@@ -3,8 +3,8 @@ kind: Deployment
 metadata: 
   name: flipkart-deployment
   namespace: k-ns
-labels:
-  app: flipkart-app
+  labels:
+    app: flipkart-app
 spec:
   replicas: 1
   selector:
@@ -12,8 +12,8 @@ spec:
       app: flipkart-app
   template:
     metadata:
-    labels:
-      app: flipkart-app
+      labels:
+        app: flipkart-app
     spec:
       containers:
       - name: flipkart-container
