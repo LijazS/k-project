@@ -5,8 +5,8 @@ metadata:
   namespace: k-ns
 spec:
   parentRefs:
-    - name: http
-      namespace: kgateway-system
+    - name: my-gateway
+      namespace: k-ns
   rules:
     - matches:
         - path:
