@@ -1,0 +1,17 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: flipkart-route
+  namespace: k-ns
+spec:
+  parentRefs:
+    - name: http
+      namespace: kgateway-system
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: "/flipkart"      # root path
+      backendRefs:
+        - name: flipkart-service    # your Kubernetes Service name
+          port: 80
