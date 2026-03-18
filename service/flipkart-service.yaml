@@ -4,6 +4,7 @@ metadata:
   name: flipkart-service
   namespace: k-ns
 spec:
+  type: NodePort
   selector:
     app: flipkart-app
   ports:
