@@ -3,6 +3,6 @@ kind: configMap
 metadata:
   name: flipkart-configmap
   namespace: k-ns
-labels:
-  app: flipkart-app
+  labels:
+    app: flipkart-app
 data:
