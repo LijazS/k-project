@@ -10,6 +10,9 @@ spec:
     name: flipkart-deployment
   minReplicas: 1
   maxReplicas: 10
+  behaviour:
+    scaleDown:
+      stabilizationWindowSeconds: 20
   metrics:
     - type: Resource
       resource:
