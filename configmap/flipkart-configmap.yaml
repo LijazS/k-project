@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: configMap
+metadata:
+  name: flipkart-configmap
+labels:
+  app: flipkart-app
+data:
