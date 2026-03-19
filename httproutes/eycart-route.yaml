@@ -1,0 +1,17 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: eycart-route
+  namespace: k-ns
+spec:
+  parentRefs:
+    - name: my-gateway
+      namespace: k-ns
+  rules:
+    - matches: 
+        - path: 
+            type: PathPrefix 
+            value: /ey
+      backendRefs:
+        - name: eycart-service
+          port: 3000   

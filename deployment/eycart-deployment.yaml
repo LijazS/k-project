@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: eycart-deployment
+  namespace: k-ns
+  labels:
+    app: eycart-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eycart-app
+  template:
+    metadata:
+      labels:
+        app: eycart-app
+    spec:
+      containers:
+      - name: eycart-container
+        image:
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+
+    
+

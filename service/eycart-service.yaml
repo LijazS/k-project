@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: eycart-service
+  namespace: k-ns
+spec:
+  type: ClusterIP
+  selector:
+    app: eycart-app
+  ports:
+    - port: 3000
+      targetPort: 3000
