@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: transaction-deployment
+  namespace: k-ns
+  labels:
+    app: transaction-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: transaction-app
+  template:
+    metadata:
+      labels:
+        app: transaction-app
+    spec:
+      containers:
+      - name: transaction-container
+        image: muralisocial123/transaction-app:v1.0.0
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+
+  

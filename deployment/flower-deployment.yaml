@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: flower-deployment
+  namespace: k-ns
+  labels:
+    app: flower-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flower-app
+  template:
+    metadata:
+      labels:
+        app: flower-app
+    spec:
+      containers:
+      - name: flower-container
+        image: muralisocial123/kyndrl-flower-app:v1.1.0
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3015
+
+  

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fitness-service
+  namespace: k-ns
+spec:
+  type: ClusterIP
+  selector:
+    app: fitness-app
+  ports:
+    - port: 5000
+      targetPort: 5000
