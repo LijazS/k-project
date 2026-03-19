@@ -12,6 +12,12 @@ spec:
         - path: 
             type: PathPrefix 
             value: /ey
+      filters:
+        - type: URLRewwrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
       backendRefs:
         - name: eycart-service
           port: 3000   
