@@ -7,10 +7,10 @@ metadata:
     app: fitness-app
 spec:
   strategy:
-  type: RollingUpdate
-  rollingUpdate:
-    maxSurge: 1
-    maxUnavailable: 1
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
   replicas: 1
   selector:
     matchLabels:
