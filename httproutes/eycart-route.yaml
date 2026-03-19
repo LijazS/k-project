@@ -13,7 +13,7 @@ spec:
             type: PathPrefix 
             value: /ey
       filters:
-        - type: URLRewwrite
+        - type: URLRewrite
           urlRewrite:
             path:
               type: ReplacePrefixMatch
