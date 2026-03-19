@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: eycart-container
-        image:
+        image: muralisocial123/ey-cart:v1.1.0
         resources:
           requests:
             memory: "64Mi"
